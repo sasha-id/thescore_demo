@@ -50,3 +50,4 @@
   <%= smart_listing.paginate %>
   <%= smart_listing.pagination_per_page_links %>
 </div>
+<%= link_to 'Download CSV', players_path(params.permit(:name, players_smart_listing: {}).merge(format: :csv)), download: 'players.csv' %>

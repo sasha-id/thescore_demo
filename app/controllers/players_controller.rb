@@ -9,6 +9,11 @@ class PlayersController < ApplicationController
     query = Player.includes(:team).all
     query = query.search_by_name(params[:name]) unless params[:name].blank?
     @players = smart_listing_create(:players, query, partial: 'players/listing', page_sizes: [10, 20], default_sort: { 'name': 'asc' })
+    respond_to do |format|
+      format.html
+      format.csv { send_data @players.to_csv }
+    end
+
   end
 
   private
