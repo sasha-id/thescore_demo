@@ -1,0 +1,33 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  team: one
+  pos: MyString
+  attg: 1.5
+  att: 1.5
+  yds: 1.5
+  avg: 1.5
+  ydsg: 1.5
+  td: 1.5
+  lng: 1.5
+  rfd: 1.5
+  rfdp: 1.5
+  r20ye: 1.5
+  r40ye: 1.5
+  fun: 1.5
+
+two:
+  team: two
+  pos: MyString
+  attg: 1.5
+  att: 1.5
+  yds: 1.5
+  avg: 1.5
+  ydsg: 1.5
+  td: 1.5
+  lng: 1.5
+  rfd: 1.5
+  rfdp: 1.5
+  r20ye: 1.5
+  r40ye: 1.5
+  fun: 1.5

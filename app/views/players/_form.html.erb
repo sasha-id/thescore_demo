@@ -1,0 +1,87 @@
+<%= form_with(model: player, local: true) do |form| %>
+  <% if player.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(player.errors.count, "error") %> prohibited this player from being saved:</h2>
+
+      <ul>
+        <% player.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :team_id %>
+    <%= form.text_field :team_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pos %>
+    <%= form.text_field :pos %>
+  </div>
+
+  <div class="field">
+    <%= form.label :attg %>
+    <%= form.text_field :attg %>
+  </div>
+
+  <div class="field">
+    <%= form.label :att %>
+    <%= form.text_field :att %>
+  </div>
+
+  <div class="field">
+    <%= form.label :yds %>
+    <%= form.text_field :yds %>
+  </div>
+
+  <div class="field">
+    <%= form.label :avg %>
+    <%= form.text_field :avg %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ydsg %>
+    <%= form.text_field :ydsg %>
+  </div>
+
+  <div class="field">
+    <%= form.label :td %>
+    <%= form.text_field :td %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lng %>
+    <%= form.text_field :lng %>
+  </div>
+
+  <div class="field">
+    <%= form.label :rfd %>
+    <%= form.text_field :rfd %>
+  </div>
+
+  <div class="field">
+    <%= form.label :rfdp %>
+    <%= form.text_field :rfdp %>
+  </div>
+
+  <div class="field">
+    <%= form.label :r20ye %>
+    <%= form.text_field :r20ye %>
+  </div>
+
+  <div class="field">
+    <%= form.label :r40ye %>
+    <%= form.text_field :r40ye %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fun %>
+    <%= form.text_field :fun %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
