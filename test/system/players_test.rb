@@ -17,7 +17,7 @@ class PlayersTest < ApplicationSystemTestCase
     fill_in "Att", with: @player.att
     fill_in "Attg", with: @player.attg
     fill_in "Avg", with: @player.avg
-    fill_in "Fun", with: @player.fun
+    fill_in "Fum", with: @player.fum
     fill_in "Lng", with: @player.lng
     fill_in "Pos", with: @player.pos
     fill_in "R20ye", with: @player.r20ye
@@ -41,7 +41,7 @@ class PlayersTest < ApplicationSystemTestCase
     fill_in "Att", with: @player.att
     fill_in "Attg", with: @player.attg
     fill_in "Avg", with: @player.avg
-    fill_in "Fun", with: @player.fun
+    fill_in "Fum", with: @player.fum
     fill_in "Lng", with: @player.lng
     fill_in "Pos", with: @player.pos
     fill_in "R20ye", with: @player.r20ye

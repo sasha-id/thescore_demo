@@ -14,7 +14,7 @@ one:
   rfdp: 1.5
   r20ye: 1.5
   r40ye: 1.5
-  fun: 1.5
+  fum: 1.5
 
 two:
   team: two
@@ -30,4 +30,4 @@ two:
   rfdp: 1.5
   r20ye: 1.5
   r40ye: 1.5
-  fun: 1.5
+  fum: 1.5

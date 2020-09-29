@@ -1,0 +1,12 @@
+
+<%= smart_listing_controls_for(:players, {class: "from-row"}) do %>
+  <div class="row col-auto shrink mb-1">
+    <div class="col-2">
+      <%= text_field_tag :name,  params[:name], :class => 'form-control', placeholder: "Name" %>
+    </div>
+    <div class="col-1 text-left">
+      <%= submit_tag 'Go!', :class => 'btn btn-primary' %>
+    </div>
+
+  </div>
+<% end %>

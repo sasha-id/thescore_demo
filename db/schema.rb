@@ -13,6 +13,7 @@
 ActiveRecord::Schema.define(version: 2020_09_29_165457) do
 
   # These are extensions that must be enabled in order to support this database
+  enable_extension "pg_trgm"
   enable_extension "plpgsql"
 
   create_table "players", force: :cascade do |t|
@@ -33,7 +34,12 @@ ActiveRecord::Schema.define(version: 2020_09_29_165457) do
     t.float "fum"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["lng"], name: "index_players_on_lng"
+    t.index ["name"], name: "index_players_on_name", opclass: :gin_trgm_ops, using: :gin
+    t.index ["name"], name: "players_name2_idx"
+    t.index ["td"], name: "index_players_on_td"
     t.index ["team_id"], name: "index_players_on_team_id"
+    t.index ["yds"], name: "index_players_on_yds"
   end
 
   create_table "teams", force: :cascade do |t|

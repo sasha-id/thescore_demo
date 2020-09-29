@@ -1,0 +1,52 @@
+
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Team</th>
+      <th><%= smart_listing.sortable "Name", "name" %></th>
+      <th><%= smart_listing.sortable PLAYERS_FIELD_MAP[:pos], 'pos' %></th>
+      <th><%= smart_listing.sortable PLAYERS_FIELD_MAP[:attg], 'attg' %></th>
+      <th><%= smart_listing.sortable PLAYERS_FIELD_MAP[:att], 'att' %></th>
+      <th><%= smart_listing.sortable PLAYERS_FIELD_MAP[:yds], 'yds' %></th>
+      <th><%= smart_listing.sortable PLAYERS_FIELD_MAP[:avg], 'avg' %></th>
+      <th><%= smart_listing.sortable PLAYERS_FIELD_MAP[:ydsg], 'ydsg' %></th>
+      <th><%= smart_listing.sortable PLAYERS_FIELD_MAP[:td], 'td' %></th>
+      <th><%= smart_listing.sortable PLAYERS_FIELD_MAP[:lng], 'lng' %></th>
+      <th><%= smart_listing.sortable PLAYERS_FIELD_MAP[:rfd], 'rfd' %></th>
+      <th><%= smart_listing.sortable PLAYERS_FIELD_MAP[:rfdp], 'rfdp' %></th>
+      <th><%= smart_listing.sortable PLAYERS_FIELD_MAP[:r20ye], 'r20ye' %></th>
+      <th><%= smart_listing.sortable PLAYERS_FIELD_MAP[:r40ye], 'r40ye' %></th>
+      <th><%= smart_listing.sortable PLAYERS_FIELD_MAP[:fum], 'fum' %></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @players.each do |player| %>
+      <tr>
+        <td><%= player.team.abbreviation %></td>
+        <td><%= player.name %></td>
+        <td><%= player.pos %></td>
+        <td><%= player.attg %></td>
+        <td><%= player.att %></td>
+        <td><%= player.yds %></td>
+        <td><%= player.avg %></td>
+        <td><%= player.ydsg %></td>
+        <td><%= player.td %></td>
+        <td><%= player.lng %></td>
+        <td><%= player.rfd %></td>
+        <td><%= player.rfdp %></td>
+        <td><%= player.r20ye %></td>
+        <td><%= player.r40ye %></td>
+        <td><%= player.fum %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+
+<div class="mb-5">
+  <%= smart_listing.paginate %>
+  <%= smart_listing.pagination_per_page_links %>
+</div>

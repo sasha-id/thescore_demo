@@ -1,0 +1,17 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  
+  <%= link_to content_for?(:title) ? yield(:title) : "The Score Demo", root_path, class: "navbar-brand" %>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsDefault">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+
+  <div class="collapse navbar-collapse" id="navbarsDefault">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item"><%= link_to "Players", players_path, class: "nav-link" %></li>
+      <li class="nav-item"><%= link_to "Repo", 'http://', class: "nav-link" %></li>
+    </ul>
+  </div>
+</nav>
+
+

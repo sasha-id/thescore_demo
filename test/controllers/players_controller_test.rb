@@ -17,7 +17,7 @@ class PlayersControllerTest < ActionDispatch::IntegrationTest
 
   test "should create player" do
     assert_difference('Player.count') do
-      post players_url, params: { player: { att: @player.att, attg: @player.attg, avg: @player.avg, fun: @player.fun, lng: @player.lng, pos: @player.pos, r20ye: @player.r20ye, r40ye: @player.r40ye, rfd: @player.rfd, rfdp: @player.rfdp, td: @player.td, team_id: @player.team_id, yds: @player.yds, ydsg: @player.ydsg } }
+      post players_url, params: { player: { att: @player.att, attg: @player.attg, avg: @player.avg, fum: @player.fum, lng: @player.lng, pos: @player.pos, r20ye: @player.r20ye, r40ye: @player.r40ye, rfd: @player.rfd, rfdp: @player.rfdp, td: @player.td, team_id: @player.team_id, yds: @player.yds, ydsg: @player.ydsg } }
     end
 
     assert_redirected_to player_url(Player.last)
@@ -34,7 +34,7 @@ class PlayersControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update player" do
-    patch player_url(@player), params: { player: { att: @player.att, attg: @player.attg, avg: @player.avg, fun: @player.fun, lng: @player.lng, pos: @player.pos, r20ye: @player.r20ye, r40ye: @player.r40ye, rfd: @player.rfd, rfdp: @player.rfdp, td: @player.td, team_id: @player.team_id, yds: @player.yds, ydsg: @player.ydsg } }
+    patch player_url(@player), params: { player: { att: @player.att, attg: @player.attg, avg: @player.avg, fum: @player.fum, lng: @player.lng, pos: @player.pos, r20ye: @player.r20ye, r40ye: @player.r40ye, rfd: @player.rfd, rfdp: @player.rfdp, td: @player.td, team_id: @player.team_id, yds: @player.yds, ydsg: @player.ydsg } }
     assert_redirected_to player_url(@player)
   end
 
